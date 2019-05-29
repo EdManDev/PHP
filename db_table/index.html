@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>some work</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><b>First Name</b></td>
+				<td><b>Last Name</b></td>
+				<td><b>Product</b></td>
+				<td><b>Distribution</b></td>
+				<td><b>Dateof Purchase</b></td>
+			</tr>
+			; while ($row = $result->fetch_array()) { $html.="
+			<tr>
+				"; for ($i=0; $i <$result_count ; $i++) { $html.="
+				<td>".$row[$i]."</td>
+				"; } $html.="
+			</tr>
+			"; } $html.=
+		</table>
+	</body>
+</html>
