@@ -34,7 +34,7 @@ CREATE TABLE `name` (
   `last_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `purchases` (
+CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `distributor` varchar(255) NOT NULL
@@ -50,7 +50,7 @@ INSERT INTO `name` (`id`, `first_name`, `last_name`) VALUES
 (4, 'Ed Manigat', 'Port-au-Prince'),
 (5, 'Josue Jean', 'Jeremi');
 
-INSERT INTO `purchases`(`id`, `name`, `distributor`) VALUES
+INSERT INTO `product`(`id`, `name`, `distributor`) VALUES
 (1, 'chips', 'A deliver'),
 (2, 'salsa', 'B deliver'),
 (3, 'pickles', 'A deliver'),
@@ -66,7 +66,7 @@ INSERT INTO `purchases`(`id`, `name`, `distributor`) VALUES
 ALTER TABLE `name`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `purchases`
+ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -80,7 +80,7 @@ ALTER TABLE `name`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
-ALTER TABLE `purchases`
+ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
