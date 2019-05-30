@@ -1,0 +1,11 @@
+body{
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+}
+
+table{
+	background: #111;
+	color: white;
+	padding: 10px;
+}

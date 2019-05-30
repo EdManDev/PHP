@@ -1,7 +1,7 @@
 <?php
   $mysqli=new mysqli("localhost","demo" ,"demopass" ,"db_table");
 
-  $result = $mysqli->query("SELECT first_name, last_name, product.name as purchases.name_ID and purchases.product_ID=product.ID");
+  $result = $mysqli->query("SELECT first_name, last_name, product.name as purchases.name_ID and purchases.product_ID=product.ID ");
 
   $result_count=$mysqli->field_count;   
 
@@ -9,7 +9,6 @@
   "<html>
     <head></head>
     <title>some work</title>
-
     <body>
       <table>
         <tr>
