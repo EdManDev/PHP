@@ -1,4 +1,5 @@
 <?php
+
   $mysqli=new mysqli("localhost","demo" ,"demopass" ,"db_table");
 
   $result = $mysqli->query("SELECT first_name, last_name, product.name as purchases.name_ID and purchases.product_ID=product.ID ");
@@ -18,7 +19,6 @@
           <td><b>Distribution</b></td>
           <td><b>Dateof Purchase</b></td>
         </tr>";
-
         while ($row = $result->fetch_array())
         { 
           $html.="<tr>";

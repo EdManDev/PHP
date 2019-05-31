@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2019 at 06:18 PM
+-- Generation Time: May 31, 2019 at 03:16 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.1.29
 
@@ -34,11 +34,6 @@ CREATE TABLE `name` (
   `last_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `distributor` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Dumping data for table `name`
 --
@@ -50,12 +45,47 @@ INSERT INTO `name` (`id`, `first_name`, `last_name`) VALUES
 (4, 'Ed Manigat', 'Port-au-Prince'),
 (5, 'Josue Jean', 'Jeremi');
 
-INSERT INTO `product`(`id`, `name`, `distributor`) VALUES
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `distributor` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `distributor`) VALUES
 (1, 'chips', 'A deliver'),
-(2, 'salsa', 'B deliver'),
-(3, 'pickles', 'A deliver'),
-(4, 'mustard', 'B deliver'),
-(5, 'peas', 'A delivery');
+(2, 'mustard', 'B deliver'),
+(3, 'peas', 'A delivery'),
+(4, 'pickles', 'A deliver'),
+(5, 'salsa', 'B deliver');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `purchases`
+--
+
+CREATE TABLE `purchases` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `purchases`
+--
+
+INSERT INTO `purchases` (`id`, `date`) VALUES
+(1, '2019-00-00');
+
 --
 -- Indexes for dumped tables
 --
@@ -66,7 +96,16 @@ INSERT INTO `product`(`id`, `name`, `distributor`) VALUES
 ALTER TABLE `name`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexes for table `product`
+--
 ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `purchases`
+--
+ALTER TABLE `purchases`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -78,10 +117,13 @@ ALTER TABLE `product`
 --
 ALTER TABLE `name`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
 
-ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `purchases`
+--
+ALTER TABLE `purchases`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
