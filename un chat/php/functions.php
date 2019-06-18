@@ -18,7 +18,7 @@
     return $db;
     
   } catch (Exception $e) {
-  die('Erreur de connexion : ' . $e->getMessage()); 
+    die('Erreur de connexion : ' . $e->getMessage()); 
   }
 
   
