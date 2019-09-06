@@ -16,7 +16,7 @@
     $sql = "DELETE FROM car_info WHERE id=2";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record deleted successfully";
+        echo "the row was deleted successfully in the tab";
     } else {
         echo "Error deleting record: " . $conn->error;
     }
