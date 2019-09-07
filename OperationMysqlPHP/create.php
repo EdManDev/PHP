@@ -1,5 +1,5 @@
 <!-- Create Table into the BD -->
-<title>Create Table into the BD </title>
+<title>Create Table into the BD</title>
 <?php
 require_once("./connect.php");
 
@@ -10,8 +10,7 @@ $sql = "CREATE TABLE cliente (
   fecha_de_registro VARCHAR(50),
   nombre VARCHAR(50),
   email VARCHAR(50),
-  gender VARCHAR(50),
-  reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  gender VARCHAR(50)
   )";
   
   if ($conn->query($sql) === TRUE) {
