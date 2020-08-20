@@ -29,7 +29,7 @@ if (!empty($_POST['submit'])) {
     $new_file_name=time().rand(1000,9999).".".$file_name_extension;
     
     // new directories
-    //./2020/19/8
+    // // target dir & ./2020 Folder
     $new_final_destination="images/".date('Y');
     if (!is_dir($new_final_destination)) {
       mkdir($new_final_destination,0777,true);
